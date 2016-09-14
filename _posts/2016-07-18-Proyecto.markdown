@@ -6,22 +6,1136 @@ categories: jekyll update
 permalink: /proyecto/
 ---
 
- ***1. Acerca de***
+ ***1. Proposito***
+
+El siguiente proyecto busca presentar una guía ilustrada que sirva como base de inicio en NativeScript, determinando las características del framework a través de la elaboración de una aplicación móvil personalizada a un sitio de comida rápida.
+
+La aplicación antes mencionada consta de las siguientes pantallas:
+
+- Pantalla de presentación de categorías
+- Pantalla de Lista de platos
+- Pantalla de Detalle del Plato
+- Pantalla de Ubicación (Utilizando el API de Geolocalización)
+- Pantalla de Detalle de Ubicación
+- Pantalla de Contacto
+- Pantalla para Contactar
+- Pantalla de Información
+- Splash para el inicio de la aplicación
+
+A consideración:
+
+- Se explicara el uso de los widget y de las funciones en los elementos XML mas no se explicara todo el contenido XML.
+- Como se quiere investigar el framework no se hará uso de Angular y sus componentes, sin embargo, el ambiente de la aplicación contendrá angular por defecto.
+- El código a explicar esta escrito en el lenguaje TypeScript.
 
  ***2. Estructura*** 
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 2.1. Patrón de diseño</Text>*
+<br>
 
+Utilizaremos el patrón de diseño que ofrecen las plantillas de NativeScript el cual consta en manejar por carpetas el MVC de cada pantalla, es decir, cada pantalla representara una direccion en nuestra carpeta "app" la cual contendra sus respectivos archivos XML, JS y CSS (opcional).
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;">2.2. Diseño de la aplicación</Text>*
+<br>
+
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_menu.png">
+<br>
+Vista del Menú
+
+
+Todas las pantallas contendran un panel estático principal que tendrá el botón que accionara el menu o el retorno, seguido del titulo de la pantalla en la que se encuentre el usuario. 
+<br>
+
+El menú a utilizar será un SideMenu o DrawerMenu que se deslizara de izquierda a derecha en la pantalla mostrando las opciones de navegación. 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_categorias.png">
+<br>
+Pantalla de Presentación de Categorías
+
+
+Será la pagina principal de la aplicación correspondiente al Menú, tendrá una imagen de fondo con 5 botones que representen las categorías del restaurante. 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_platos.png">
+<br>
+Pantalla de Lista de Platos	
+
+
+Consta de un navegador por tabs para la selección de las categorías y un ListView para mostrar la lista de platos.
+<br>
+
+Cada plato será almacenado en un contenedor que mostrara el Nombre, imagen, precio y ranking del platillo. Adicionalmente se colocara un Burger menú como submenú de acciones.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_detalle_p.png">
+<br>
+Pantalla de Detalle del Plato
+
+
+En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un botón de retorno y el titulo de la pagina.
+<br>
+Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking del plato y tres botones que permitan al usuario realizar acciones.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_informacion.png">
+<br>
+Pantalla de Información
+
+
+Mostrara una imagen donde se puede colocar el logo o publicidad del sitio de comida rápida.
+<br>
+Seguido por un acordeón, que contendrá la reseña del lugar y las zonas en donde se dispone un local.
+<br>
+Se elaborara un contenedor que mostrara el nombre de la zona, hora de cierre y un botón para acceder a la ubicación del local respectivo.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_ubicacion.png">
+<br>
+Pantalla de Ubicación
+
+
+Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se mostrara un mensaje para guiar al usuario en su siguiente acción.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_comollegar.png">
+<br>
+Pantalla de Detalle de Ubicación
+
+
+En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un general de retorno y el titulo de la pagina.
+<br>
+Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y contacto del local.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_contacto.png">
+<br>
+Pantalla de Contacto
+
+
+Tendrá un contenedor fijo que mostrara la información de contacto de la sede principal, nombre del gerente, teléfono fijo y móvil, junto a un botón para poder contactar con el gerente.
+<br>
+Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccionar una se cargara el contenedor de contacto con la información respectiva.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_contactar.png">
+<br>
+Pantalla para Contactar
+
+En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un dirección de retorno y el titulo de la pagina.
+<br>
+Se mostrara un formulario donde el usuario introducirá su nombre, correo electrónico y el cuerpo del mensaje a enviar.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+				
+
+<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_inicio.png">
+<br>
+Splash para el inicio de la aplicación
+
+
+Se mostrara el logo del sitio de comida hasta que finalice la carga y renderización de la pantalla principal de la aplicación, Pantalla de lista de platos.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
  ***3. Implementación del Proyecto***
 
-	3.1. Desarrollo de la vista del Menú
-	
-	3.2. Desarrollo de la Pantalla de Lista de Platos
-	 
-	3.3. Desarrollo de la Pantalla de  Detalle del Plato
-	 
-	3.4. Desarrollo de la Pantalla de Ubicación (Utilizando API de Geolocalización)
-	 
-	3.5. Desarrollo de la Pantalla de Contacto
+Se utilizara la plantilla de NativeScript para la navegacion e implementacion del DrawerMenu, [NativeScript Drawer Template](https://github.com/ignaciofuentes/nativescript-template-drawer-ts), nos dará la estructura de la aplicación con las carpetas 'pages' y 'shared'.
 
-	3.6. Desarrollo de la Pantalla de Inicio
-	  
-	3.7. Instalación en el dispositivo
+- app/pages/: Dirección donde se ubican las paginas de la aplicación.
+- app/shared/: Dirección que contiene los componentes compartidos en la aplicación, es decir, aquellos componentes que se reutilizan.
+
+Creamos el proyecto con nuestra plantilla basada en TypeScript (si quitamos la etiqueta -ts se genera el proyecto con JavaScript)
+
+```
+tns create LosGorditosPlus --template nativescript-template-drawer-ts
+```
+
+En el archivo "app/shared/BasePage.ts" observamos la clase abstracta BasePage que contiene las funciones para la navegación entre paginas, conseguimos la definición del modelo de la clase con el atributo "selectedPage" que indica la pagina actual de la aplicación.
+
+```
+let appViewModel = new Observable({selectedPage: "menu"});
+```
+
+Mientras que la clase posee las siguientes funciones:
+
+- toogleDrawer: Sobrepone o quita el componente "drawer" sobre la pantalla actual.
+- navigate: Realiza la navegación entre paginas, carga la información de la ruta a navegar obteniendo el nombre de la pagina de la etiqueta "text" del componente donde se realiza la función, seguidamente, actualiza el modelo de la clase y realiza la navegación sobreponiendo la pagina seleccionada. 
+
+Para el manejo de la ruta de navegación se concatena la dirección de la pagina a mostrar, adjuntando el directorio y archivo de la pagina, en este caso ambos deben poseer el mismo nombre.
+
+```
+navigate(args){
+    let pageName = args.view.text.toLowerCase();
+    appViewModel.set("selectedPage", pageName);
+    topmost().navigate("pages/" + pageName + "/" + pageName);
+}	
+```
+
+Mientras que en el archivo "./app/shared/widgets/drawer-content.xml" tenemos la definición del diseño del de Drawer Menu.
+
+Para utilizarlo en las paginas que crearemos es necesario importar el los archivos TypeScript el BasePage y declarar los XML de la siguiente manera:
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  actionBarHidden="true">
+    <drawer:rad-side-drawer id="drawer">
+        <drawer:rad-side-drawer.mainContent>
+            <stack-layout loaded="mainContentLoaded">
+                <!-- Contenido de la Pagina -->
+            </stack-layout>
+        </drawer:rad-side-drawer.mainContent>
+        <drawer:rad-side-drawer.drawerContent>
+            <widgets:drawer-content />
+        </drawer:rad-side-drawer.drawerContent>
+    </drawer:rad-side-drawer>
+</page>
+```
+
+La etiqueta 'actionBarHidden' por defecto trae el valor de 'false' cuando no se quiera utilizar la bara de navegacion nativa colocamos su valor en 'true' 
+
+Eliminaremos el contenido de la carpeta "./app/pages/" ya que por defecto trae 3 paginas generadas.
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.1. Desarrollo de la vista del Menú</Text>*
+<br>
+<br>
+
+Iniciaremos editando el archivo 'drawer-content.xml' con el menu que queremos mostrar.
+
+En cada opción del menú utilizaremos la etiqueta "id" que utilizaremos para la navegación y colocaremos el tap en todo Layout en lugar de solo el texto.
+
+Se declararía dentro del "stack-layout" cada una de las opciones del menú de la siguiente manera
+
+```
+<grid-layout class="drawer-content">
+  <stack-layout>
+
+  	<StackLayout id="menu" tap="navigate">
+  		<!-- Contenido de la opcion -->
+  	</StackLayout>
+
+</grid-layout>
+```
+
+Cambiamos en la función 'navigate' en './app/shared/BasePage.ts' la navegación según el texto por el ID del componente que genero la acción. También agregaremos la función 'back' que nos navegara a la ventana anterior a la actual.
+
+
+```   
+import {topmost} from "ui/frame";
+import {Page} from "ui/page";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+
+let appViewModel = new Observable({selectedPage: "menu"});
+
+export abstract class BasePage {
+    //implement this function in the inheriting pages to set their specific binding context
+    abstract mainContentLoaded(args:EventData);
+    
+    loaded(args){
+        let page = <Page>args.object;
+        page.bindingContext = appViewModel;   
+    }
+    
+    back(){
+        topmost().goBack();
+    }
+
+    toggleDrawer(){
+        let page = <Page>topmost().currentPage;
+        let drawer = <any>page.getViewById("drawer");
+        drawer.toggleDrawerState();
+    }
+    navigate(args){
+        let pageName = args.view.id.toLowerCase();
+        appViewModel.set("selectedPage", pageName);
+        topmost().navigate("pages/" + pageName + "/" + pageName);
+    }
+}
+```  
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.2. Desarrollo de la Pantalla de presentación de categorías</Text>*
+<br>
+<br>
+
+Creamos la pagina de la pantalla recordando que debe tener el mismo nombre que el ID de navegacion del menú y colocaremos el código base en estas para su funcionamiento.
+
+``` 
+mkdir app/pages/menu
+touch app/pages/menu/menu.xml
+touch app/pages/menu/menu.ts
+touch app/pages/menu/menu.css
+```
+
+Como es la pantalla de inicio modificaremos debemos indicarlo en el archivo './app/app.ts'
+
+```
+import * as application from "application";
+
+application.start({ moduleName: "pages/menu/menu" });
+```
+
+Si ejecutamos la aplicación en este momento cargara la pantalla y al deslizar el dedo de izquierda a derecha podremos acceder al DrawerMenu. Ahora colocaremos el contenido en nuestra pantalla, al haber importado el archivo 'BasePage' podemos utilizar sus funciones, agregaremos el botón que facilite al usuario la apertura del DrawerMenu y los cinco botones que representan las categorías de platos de "Los Gorditos Plus", cada uno de estos botones ira asociado a la función 'changeToList' que se encargara de hacer la navegación a la lista de platos.
+
+Declaración del botón para el DrawerMenu:
+
+```
+<StackLayout orientation="horizontal" margin="15" >
+    <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
+</StackLayout>
+```
+
+Declaracion del botón para categorías: 
+
+```
+<StackLayout margin="15" >
+  <image src="Dirección_de_la_Imagen" id="id_categoría" tap="changeToList" width="46" />
+  <label text="Nombre_Categoría" horizontalAlignment="center" />   
+</StackLayout>
+```
+
+Declaramos la función changeToList, esta tomara el numero del tab según el "id" establecido en el botón y en base a su valor colocaremos el titulo a pasar en la navegación. Es necesario importar el componente 'topmost' para que la pagina pueda realizar la navegación.
+
+```
+<!-- .app/pages/menu/menu.ts -->
+import {topmost} from "ui/frame";
+
+<!-- ...... código .....-->
+
+changeToList(args) {
+    let tabNumber = args.view.id;
+    let tabTitle;
+    let tabActive;
+    switch (tabNumber){
+        case "fav": 
+            tabTitle = "favoritos" ;
+            tabActive= 0;
+            break;
+        case "pri":
+            tabTitle = "principales";
+            tabActive= 1;
+            break;
+        case "ens":
+            tabTitle = "ensaladas";
+            tabActive= 2;
+            break;
+        case "pos":
+            tabTitle = "postres";
+            tabActive= 3;
+            break;
+        case "beb":
+            tabTitle = "bebidas";
+            tabActive= 4;
+            break;
+        default: 
+            tabTitle = "favoritos";
+            tabActive= 0;
+            break;
+        }
+
+    var navigationOptions={
+        moduleName:'pages/menulist/menulist',
+        context:{tab: tabActive,
+                title: tabTitle
+                }
+    }
+    topmost().navigate(navigationOptions);
+}
+```
+
+En el código anterior se establece unas opciones de navegación que nos redirigen a la pantalla 'menulist' con un contexto que posee el Tab que estará activo y su titulo.
+
+*<Text style="text-decoration: underline; margin: 15px;"> 3.3. Desarrollo de la Pantalla de Lista de platos</Text>*
+
+Creamos la pagina de la pantalla recordando que debe tener el mismo nombre que colocamos en las opciones de navegación de la función 'changeToList' de la pantalla anterior. Colocaremos el código base en estas para su funcionamiento.
+
+``` 
+mkdir app/pages/menulist
+touch app/pages/menulist/menulist.xml
+touch app/pages/menulist/menulist.ts
+touch app/pages/menulist/menulist.css
+```
+
+Primeramente haremos que obtenga los parametros de navegación para esto declararemos la función 'onNavigatingTo' y se los asignaremos al modulo de la pagina.
+
+Declaramos los atributos del modulo:
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {screen} from "platform"
+import {Page} from "ui/page";
+
+let vm = new Observable({ 
+  active: 0,
+  titleTab: "",
+  width: screen.mainScreen.widthDIPs,
+  height: screen.mainScreen.heightDIPs
+ });
+
+ class MenuListPage extends BasePage{
+    //use this function to populate the bindingContext specific to this page
+    //make sure the root element of the main content is setting "mainContentLoaded" as its loaded event
+    mainContentLoaded(args:EventData){
+        let view = <View>args.object;
+        view.bindingContext = vm;
+    }
+    
+    onNavigatingTo(args) {
+        var page = args.object;
+      var gotData=page.navigationContext;
+      switch (gotData.tab) 
+        { 
+        case 0: 
+          vm.set("groceryList", vm.get("favoritosList"));
+          break; 
+        case 1: 
+          vm.set("groceryList", vm.get("principalesList"));
+          break; 
+        case 2: 
+          vm.set("groceryList", vm.get("ensaladasList"));
+          break; 
+        case 3: 
+          vm.set("groceryList", vm.get("postresList"));
+          break; 
+        case 4: 
+          vm.set("groceryList", vm.get("bebidasList"));
+          break; 
+        default: 
+          vm.set("groceryList", vm.get("bebidasList"));
+        } 
+      vm.set("titleTab", gotData.title);
+      vm.set("active", gotData.tab);
+    }
+}
+export = new MenuListPage();
+```
+
+Incorporamos la función en la etiqueta page del XML, de esta manera al cargar la pagina estaremos cargando los parámetros de la navegación y definiendo el valor del 'titleTab' y 'active' del modulo de la clase.
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  >
+ ....
+```
+
+En esta pantalla se requiere implementar Tabs y una lista, la funcion de cada Tabs es indicar una categoria y cambiar el contenido de la lista. Como solo haremos el frontEnd de la aplicacion declararemos el contenido de la lista en el modulo.
+
+```
+let vm = new Observable({ 
+    groceryList:([
+        { name: "Nombre_Plato", img: "Dirección_Imagen", rank: "Dirección_Imagen_rank", price: "Precio_Plato", description: "
+        Descripción_Plato"},
+        ...
+    ]),
+    principalesList:([
+        { name: "Nombre_Plato", img: "Dirección_Imagen", rank: "Dirección_Imagen_rank", price: "Precio_Plato", description: "
+            Descripción_Plato"},
+            ...
+        ]),
+    favoritosList:([
+        { name: "Nombre_Plato", img: "Dirección_Imagen", rank: "Dirección_Imagen_rank", price: "Precio_Plato", description: "
+            Descripción_Plato"},
+            ...
+        ]),
+    ensaladasList:([
+        { name: "Nombre_Plato", img: "Dirección_Imagen", rank: "Dirección_Imagen_rank", price: "Precio_Plato", description: "
+            Descripción_Plato"},
+            ...
+        ]),
+    postresList:([
+        { name: "Nombre_Plato", img: "Dirección_Imagen", rank: "Dirección_Imagen_rank", price: "Precio_Plato", description: "
+            Descripción_Plato"},
+            ...
+        ]),
+    bebidasList:([
+       { name: "Nombre_Plato", img: "Dirección_Imagen", rank: "Dirección_Imagen_rank", price: "Precio_Plato", description: "
+            Descripción_Plato"},
+            ...
+        ]),
+  active: 0,
+  titleTab: "",
+  width: screen.mainScreen.widthDIPs,
+  height: screen.mainScreen.heightDIPs
+ });
+```
+
+Para implementar los Tab realizaremos un StackLayout con orientación horizontal que contenga cada una de las categorías: Favoritos, Principales, Ensaladas, Postres y Bebidas, colocando un identificador a cada uno de estos. utilizaremos el atributo 'Active' para modificar los estilos de cada botón.
+
+```
+<StackLayout orientation="horizontal" marginTop="3">
+  <StackLayout>
+    <image id="favoritos"
+      src="{{ active == 0 ? '~/images/1_Icons/recursos-13.png':'~/images/1_Icons/recursos-18.png'}}" 
+      height="{{ active == 0 ? '25':'30'}}"
+      marginBottom="{{ active == 0 ? '5':'0'}}"
+      tap="tabChange"/>
+    <StackLayout class="{{ active == 0 ? 'lineTab':''}}" width="{{ width/5}}" />
+  </StackLayout>
+  <StackLayout>
+    <image id="principales"
+      src="{{ active == 1 ? '~/images/1_Icons/recursos-14.png':'~/images/1_Icons/recursos-19.png'}}"
+      height="{{ active == 1 ? '25':'30'}}"
+      marginBottom="{{ active == 1 ? '5':'0'}}"
+      tap="tabChange"/>
+    <StackLayout class="{{ active == 1 ? 'lineTab':''}}" width="{{ width/5}}" />
+  </StackLayout>
+  <StackLayout>
+    <image id="ensaladas" 
+      src="{{ active == 2 ? '~/images/1_Icons/recursos-15.png':'~/images/1_Icons/recursos-20.png'}}"              
+      height="{{ active == 2 ? '25':'30'}}"
+      marginBottom="{{ active == 2 ? '5':'0'}}"
+      tap="tabChange"/>
+    <StackLayout class="{{ active == 2 ? 'lineTab':''}}" width="{{ width/5}}" />
+  </StackLayout>
+  <StackLayout>
+    <image id="postres"
+      src="{{ active == 3 ? '~/images/1_Icons/recursos-16.png':'~/images/1_Icons/recursos-21.png'}}" 
+      height="{{ active == 3 ? '25':'30'}}"
+      marginBottom="{{ active == 3 ? '5':'0'}}"
+      tap="tabChange"/>
+    <StackLayout class="{{ active == 3 ? 'lineTab':''}}" width="{{ width/5}}" />
+  </StackLayout>
+  <StackLayout>
+    <image id="bebidas"
+      src="{{ active == 4 ? '~/images/1_Icons/recursos-17.png':'~/images/1_Icons/recursos-22.png'}}"
+      height="{{ active == 4 ? '25':'30'}}"
+      marginBottom="{{ active == 4 ? '5':'0'}}"
+      tap="tabChange"/>
+    <StackLayout class="{{ active == 4 ? 'lineTab':''}}" width="{{ width/5}}" />
+  </StackLayout>
+</StackLayout>
+```
+
+Agregaremos la función para el manejo de los Tab la cual cambiara los valores de los atributos "Active" y "groceList" para indicar el tab activo y actualizar la lista de platos, respectivamente.
+
+```
+tabChange(args){
+  let tab = args.view.id.toLowerCase();
+  let tabActive ;
+  let tabTitle ;
+  switch (tab) { 
+    case'favoritos': 
+      tabActive=0;
+      tabTitle='favoritos';
+      vm.set("groceryList", vm.get("favoritosList"));
+    break; 
+    case'principales': 
+      tabActive=1;
+      tabTitle='principales';
+      vm.set("groceryList", vm.get("principalesList")); 
+    break; 
+    case'ensaladas': 
+      tabActive=2;
+      tabTitle='ensaladas';
+      vm.set("groceryList", vm.get("ensaladasList"));
+    break; 
+    case'postres': 
+      tabActive=3;
+      tabTitle='postres';
+      vm.set("groceryList", vm.get("postresList"));
+    break; 
+    case'bebidas': 
+      tabActive=4;
+      tabTitle='bebidas';
+      vm.set("groceryList", vm.get("bebidasList"));
+    break; 
+    default: 
+      tabActive=0;
+      tabTitle='favoritos';
+      vm.set("groceryList", vm.get("favoritosList"));
+    break; 
+  } 
+  vm.set("active", tabActive);
+  vm.set("titleTab", tabTitle);
+}
+```
+
+Trabajaremos con el componente ListView que recibe un array en la etiqueta "items" e itera el código que contiene por cada posición y podemos acceder a su contenido directamente. Colocamos en el XML de la pagina menulist el siguiente código bajo a la barra de Tabs.
+
+```
+<ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.69}}">
+  <ListView.itemTemplate>
+    <StackLayout marginBottom= "5">
+      <image src="{{img}}" height="{{height*0.15}}" 
+          name="{{ name }}"
+          price="{{ price }}" 
+          rank="{{rank}}" 
+          description="{{description}}"
+          img="{{img}}"
+          tap="changeToDetail" />
+      <DockLayout class="DishBar">
+        <StackLayout dock="left">
+          <Label text="{{ name }}" textWrap="true" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
+          <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center" class="DishPrice"/>
+        </StackLayout>
+        <StackLayout dock="right" marginRight="3">
+          <image src="~/images/1_Icons/recursos-07.png" horizontalAlignment="right" marginTop="5" height="17" marginRight="2"
+          name="{{ name }}"
+          price="{{ price }}" 
+          rank="{{rank}}" 
+          description="{{description}}"
+          img="{{img}}"
+          tap="changeToDetail" />
+          <image src="{{rank}}" horizontalAlignment="right" height="15" marginTop="6"/>
+        </StackLayout>
+      </DockLayout>
+    </StackLayout>
+  </ListView.itemTemplate>
+</ListView>
+```
+
+En el código anterior, estamos anexando información a las imágenes que ejecutan la función 'changeToDetail' para poder acceder a esta (args) cuando se genere la acción. Finalmente, declaramos la función 'changeToDetail' que realiza la navegación a la pagina para el detalle del plato enviando la información respectiva.
+
+```
+changeToDetail(args) {
+  let dish_img = args.view.img;
+  let dish_rank=  args.view.rank;
+  let dish_description= args.view.description;
+  let dish_price= args.view.price;
+  let dish_name= args.view.name
+  var navigationOptions={
+    moduleName:'pages/menudetail/menudetail',
+    context:{
+            name: dish_name,
+            img: dish_img,
+            rank: dish_rank,
+            price: dish_price,
+            description: dish_description
+            }
+  }
+  topmost().navigate(navigationOptions);
+}
+```
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.4. Desarrollo de la Pantalla de Detalle del Plato</Text>*
+<br>
+<br>
+
+En esta pagina no se implementara el DrawerMenu sino que haremos un boton que utilize la funcion 'Back' del BasePage.js definimos nuestros archivos y el codigo base, como es una pagina que recibe parametros en la navegacion volveremos a declarar la funcion 'onNavigatingTo'
+
+```
+mkdir ./app/pages/menudetail
+touch ./app/pages/menudetail/menudetail.ts
+touch ./app/pages/menudetail/menudetail.xml
+touch ./app/pages/menudetail/menudetail.css
+```
+
+Volveremos a declarar nuestra barra de navegación para conservar el mismo estilo y le asignaremos la función 'back' para retornar a nuestra lista de platos.
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  class="white_bg"
+  >
+  <stack-layout loaded="mainContentLoaded">
+    <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+      <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" class="barmenu" />
+      <Label text="detalle" class="title" width="{{width - 60}}"/>
+    </StackLayout>
+  </stack-layout>
+</page>
+```
+
+Declaramos el TypeScript de la pagina.
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {screen} from "platform"
+import {Page} from "ui/page";
+
+let vm = new Observable({ 
+    name: "default",
+    price: "",
+    img: "",
+    rank: "",
+    description:"",
+    show: 0,
+    width: screen.mainScreen.widthDIPs,
+    height: screen.mainScreen.heightDIPs
+ });
+
+class MenuDetailPage extends BasePage{
+  mainContentLoaded(args:EventData){
+    let view = <View>args.object;
+    view.bindingContext = vm;
+  }
+    
+  onNavigatingTo(args) {
+    var page = args.object;
+    var gotData=page.navigationContext;
+    vm.set("name", gotData.name);
+    vm.set("price", gotData.price);
+    vm.set("img", gotData.img);
+    vm.set("rank", gotData.rank);
+    vm.set("description", gotData.description);
+  }
+}
+export = new MenuDetailPage();
+```
+
+Una vez tenemos el código básico para poder navegar a nuestra pagina y obtener la información que pasamos en la navegación realizaremos el diseño de la pagina. Esta pagina consta de un 'Pop-up Button' para mostrar las opciones de redes sociales, sin embargo, NativeScript no ofrece una vista Pop-Up o la funcionalidad de CSS para posicionar componentes sino que ofrece un AbsoluteLayout en el cual simularemos el evento declarando las dos vistas y modificando la visibilidad según la acción.
+
+Agregamos al XML de la pagina nuestro diseno en AbsoluteLayout
+
+```
+<AbsoluteLayout>
+  <AbsoluteLayout left="0" top="0" padding="5">
+    <StackLayout left="0" top="0" width="{{width-10}}">
+      <image src="{{img}}" />
+    </StackLayout>
+    <DockLayout left="0" top="{{height*0.22}}" class="bara" width="{{width-10}}" height="{{height*0.09}}">
+      <StackLayout dock="left">
+        <Label text="{{ name }}" textWrap="true" class="DishName" />
+      </StackLayout>
+      <StackLayout dock="right" marginRight="3">
+        <image src="{{rank}}" horizontalAlignment="right" height="16" marginTop="6"/>
+      </StackLayout>
+    </DockLayout>
+    <Label text="{{ price }}" top="{{height*0.31}}" class="DishPrice"/>
+    <DockLayout top="{{height*0.37}}" width="{{width-10}}">
+      <StackLayout dock="left" class="button_1" tap="back">
+        <Label text="Cambiar Plato" />
+      </StackLayout>
+      <StackLayout dock="right" class="button_2">
+        <Label text="Pedir" horizontalAlignment="center"/>
+      </StackLayout>
+    </DockLayout>
+    <Label top="{{height*0.45}}" text="{{description}}" textWrap="true" width="{{width-10}}" class="description"/>
+  </AbsoluteLayout>
+  <AbsoluteLayout left="0" top="0" height="{{height}}" width="{{width}}" class="shadow" visibility="{{ show == 1 ? 'visible' : 'collapsed' }}"/>
+  <StackLayout left="{{width*0.37}}" top="{{height*0.37}}" orientation="horizontal" class="share" visibility="{{ show == 1 ? 'visible' : 'collapsed' }}">
+    <image src="~/images/1_Icons/recursos-29.png" height="50" margin="5"/>
+    <image src="~/images/1_Icons/recursos-30.png" height="50" margin="5"/>
+    <image src="~/images/1_Icons/recursos-31.png" height="50" margin="5"/>
+  </StackLayout>
+  <image src="~/images/1_Icons/recursos-28.png" class="share_button" top="{{height*0.27}}" tap="share" left="{{width*0.77}}"/>
+</AbsoluteLayout>
+```
+
+El orden en que se declaran los componentes indica el orden para sobreponer componentes, en el código anterior estamos declarando un AbsoluteLayout que representa todo el contenido de la pagina internamente contiene un AbsoluteLayout donde se organizan los componentes que serán opacados, seguido de otro AbsoluteLayout que generara la sombra para guiar al usuario en el 'Pop-up' y finalmente el contenido del 'pop-up', estos dos últimos tienen declarada la etiqueta 'visibility' que es contralada por el valor del atributo 'show' de esta manera al dar click en el "share_button" se mostrara u ocultara el 'pop-up'.
+
+Finalmente, declararemos la función 'share' para controlar la visibilidad del 'pop-up'.
+
+```
+share() {
+  if (vm.get("show") == 0)
+    vm.set("show", 1);
+  else
+    vm.set("show",0);
+}
+```
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.5. Desarrollo de la Pantalla de Ubicación (Utilizando el API de Geolocalización)</Text>*
+<br>
+<br>
+
+Haremos la segunda pagina de nuestro DrawerMenu recordando que debe llamarce igual al 'id' que colocamos en este.
+
+```
+mkdir ./app/pages/location
+touch ./app/pages/location.ts
+touch ./app/pages/location.xml
+touch ./app/pages/location.css
+```
+
+Instalaremos el plugin de [Google Maps SDK](https://github.com/dapriett/nativescript-google-maps-sdk) para NativeScript y seguiremos la configuracion que indica la pagina.
+
+```
+tns plugin add nativescript-google-maps-sdk
+```
+
+Inconvenientes que se pueden presentar:
+
+iOS:
+
+- No acepta la llave porque no consigue un modulo. Solución: Crearemos en la carpeta 'app' los archivos 'GMSServiceKey.d.ts' y 'GMSServiceKey.js' con el siguiente contenido:
+
+GMSService.d.ts
+```
+declare function GMSServiceKey(): void; export = GMSServiceKey;
+```
+
+GMSService.js
+```
+module.exports = function () { GMSServices.provideAPIKey("API_KEY"); };
+```
+
+app.ts
+```
+import * as application from "application";
+import GMSServiceKey = require('./GMSServiceKey');
+
+if(application.ios) {
+  GMSServiceKey();
+}
+application.start({ moduleName: "pages/menu/menu" });
+```
+
+  - Error con el SandBox. Solución: tendremos que modificar el valor en el archivo de configuración de NativeScript que usualmente se encuentra en '/usr/local/lib/node_modules/nativescript/config/config.json' cambiamos el valor de 'USE_POD_SANDBOX' a false. Si da error con la llave por identificación, utilizar una llave genérica.
+
+Android:
+
+- No pinta el Mapa: Según los emuladores de Android no son compatibles con GoogleMaps v2 por lo que podemos intentar instalando una versión de la librería mas estable como indica la guía de configuración de esta. Sin embargo, en algunos dispositivos (emuladores o no) no pinta el mapa el problema fue presentado el 3 de Septiembre del 2016, se volvió a abrir el issue el 12 de Septiembre de 2016 y no se ha conseguido una solución a este.
+
+Una vez instalado el plugin declararemos nuestro XML indicando xmlns para utilizarlo
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:maps="nativescript-google-maps-sdk"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  actionBarHidden="true"
+  >
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded">
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="ubicación" width="{{width - 60}}" class="title"/>
+        </StackLayout>
+        <AbsoluteLayout height="{{height}}" width="{{width}}" >
+
+          <maps:mapView latitude="9.2" longitude="-67" 
+          zoom="7" bearing="{{ bearing }}" 
+          tilt="{{ tilt }}" mapReady="OnMapReady"  
+          markerSelect="onMarkerSelect" 
+          height="{{height}}" width="{{width}}" />
+          <Label top="0" left="0" text="Seleccione un Establecimiento" width="{{width}}" class="helper" />
+
+        </AbsoluteLayout>
+      </stack-layout>
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>
+```
+Nuevamente utilizaremos el AbsoluteLayout para posicionar un texto que indique al usuario la próxima acción a realizar en la pagina.
+
+En la declaración de la pagina utilizaremos variables que contenga la información de las marcas a colocar en el mapa
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {topmost} from "ui/frame";
+import {screen} from "platform";
+import {Page} from "ui/page";
+var mapsModule = require("nativescript-google-maps-sdk");
+
+let vm = new Observable({ 
+    width: screen.mainScreen.widthDIPs,
+    height: screen.mainScreen.heightDIPs,
+    marks:([
+        { 
+            latitude: 10.498086655450642,
+            longitude: -66.85348734185897,
+            title: "Caracas",
+            snip: "Venezuela",
+            dir: "Synergy-Gb, Piso 3 Centro Gerencial Mohedano,Avenida Los Chaguaramos, Caracas, Distrito Capital",
+            gerente: "Alexander Ramirez",
+            fijo: "0212-1234567",
+            movil: "0414-1112233",
+            },
+        { 
+            latitude: 10.50,
+            longitude: -66.86,
+            title: "Los Jardines",
+            snip:"Distrito Capital",
+            dir: "Los Jardines,Avenida Los Samám, Caracas, Distrito Capital",
+            gerente: "Ali Suarez",
+            fijo: "0212-1234567",
+            movil: "0414-1112233",
+            },
+        { 
+            latitude: 10.347091,
+            longitude: -66.992912,
+            title: "Los Teques",
+            snip: "Carrizal",
+            dir: 'C.C La Cascada, Nivel Feria, Los Teques, Miranda',
+            gerente: "Alexander Ramirez",
+            fijo: "0212-1234567",
+            movil: "0414-1112233",
+        }
+    ]),
+ });
+
+
+class LocationPage extends BasePage{
+  mainContentLoaded(args:EventData){
+    let view = <View>args.object;
+    view.bindingContext = vm;
+  }
+
+  OnMapReady(args) {
+    var mapView = args.object;
+    let marcas=vm.get("marks");
+    for (let i=0; i<marcas.length; i++){
+        var marker = new mapsModule.Marker();
+        marker.position = mapsModule.Position.positionFromLatLng(marcas[i].latitude, marcas[i].longitude);
+        marker.userData = { index : i+1};
+        marker.data=marcas[i];
+        mapView.addMarker(marker);
+    }
+  }
+   
+  onMarkerSelect(args) {
+    let inf=args.marker.data;
+    var navigationOptions={
+        moduleName:'pages/locationdetail/locationdetail',
+        context:{
+            mark: inf
+        }
+      }
+    topmost().navigate(navigationOptions);
+  }
+   
+
+}
+export = new LocationPage();
+```
+
+En nuestra función 'OnMapReady' copiamos el array 'marks' para que sea recorrido y colocar la información respectiva a cada Marca que al ser seleccionada accionará la función 'onMarkerSelect' que realizara la navegación a la pagina 'locationdetal' o 'Detalle de Ubicación' pasando la información correspondiente.
+
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.6. Desarrollo de la Pantalla de Detalle de Ubicación</Text>*
+<br>
+<br>
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.7. Desarrollo de la Pantalla de Contacto</Text>*
+<br>
+<br>
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.8. Desarrollo de la Pantalla para Contactar</Text>*
+<br>
+<br>
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.9. Desarrollo de la Pantalla de Información</Text>*
+<br>
+<br>
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.10. Desarrollo del Splash para el inicio de la aplicación</Text>*
+<br>
+<br>
+
+<br>
+<br>
+<br>
+*<Text style="text-decoration: underline; margin: 15px;"> 3.11. Instalación en el dispositivo</Text>*
+<br>
+<br>
+
